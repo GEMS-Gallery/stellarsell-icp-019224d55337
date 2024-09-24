@@ -6,6 +6,7 @@ export const idlFactory = ({ IDL }) => {
   });
   return IDL.Service({
     'getContacts' : IDL.Func([], [IDL.Vec(Contact)], ['query']),
+    'getRandomNumbers' : IDL.Func([IDL.Nat], [IDL.Vec(IDL.Nat)], []),
     'submitContact' : IDL.Func([IDL.Text, IDL.Text, IDL.Text], [], []),
   });
 };

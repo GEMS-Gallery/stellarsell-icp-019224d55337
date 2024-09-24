@@ -9,6 +9,7 @@ export interface Contact {
 }
 export interface _SERVICE {
   'getContacts' : ActorMethod<[], Array<Contact>>,
+  'getRandomNumbers' : ActorMethod<[bigint], Array<bigint>>,
   'submitContact' : ActorMethod<[string, string, string], undefined>,
 }
 export declare const idlFactory: IDL.InterfaceFactory;

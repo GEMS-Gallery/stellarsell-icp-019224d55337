@@ -149,6 +149,66 @@ footer ul li a {
     text-decoration: none;
 }
 
+/* Memory Game Styles */
+#memory-game {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.card {
+    aspect-ratio: 1;
+    background-color: #007bff;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card:hover {
+    background-color: #0056b3;
+}
+
+.card.flipped {
+    background-color: #28a745;
+}
+
+#start-game {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#start-game:hover {
+    background-color: #0056b3;
+}
+
+#start-game:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+}
+
+#game-timer, #game-score {
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+}
+
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
@@ -162,5 +222,9 @@ footer ul li a {
     nav ul li {
         margin-left: 0;
         margin-right: 1rem;
+    }
+
+    #game-board {
+        grid-template-columns: repeat(3, 1fr);
     }
 }

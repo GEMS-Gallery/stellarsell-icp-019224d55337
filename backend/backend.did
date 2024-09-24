@@ -6,5 +6,6 @@ type Contact =
  };
 service : {
   getContacts: () -> (vec Contact) query;
+  getRandomNumbers: (nat) -> (vec nat);
   submitContact: (text, text, text) -> ();
 }
