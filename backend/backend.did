@@ -1,0 +1,10 @@
+type Contact = 
+ record {
+   email: text;
+   message: text;
+   name: text;
+ };
+service : {
+  getContacts: () -> (vec Contact) query;
+  submitContact: (text, text, text) -> ();
+}
